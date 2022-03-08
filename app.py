@@ -27,7 +27,7 @@ def Convert(lst):
 def upload_image():
     if request.method == "POST":
         if request.files:
-            addr = 'http://digitizer.progexp.com'
+            addr = 'https://digitizer.softwaresbranding.com'
             print(request.form['paper'])
             test_url = addr + '/api/paperKey/' + request.form['paper']
             response = requests.get(test_url)
@@ -167,7 +167,7 @@ def upload_image():
             final = base64.b64encode(cv2.imencode('.jpg', paper)[1]).decode()
             # print(final)
             # cv2.imshow("Original", image)
-            cv2.imshow("paper", paper)
+            # cv2.imshow("paper", paper)
 
             cv2.waitKey(0)
 
